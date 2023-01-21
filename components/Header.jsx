@@ -45,7 +45,7 @@ const Header = () => {
         <div
           className={
             isOpen
-              ? "align-center w-full  rounded-md  absolute top-20 align-middle   bg-white"
+              ? "align-center w-full  rounded-md   top-20 align-middle fixed z-50  bg-white"
               : "hidden"
           }
         >
