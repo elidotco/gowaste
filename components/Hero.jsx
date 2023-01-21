@@ -8,7 +8,7 @@ const Hero = () => {
         {/* <img src={line} alt="line" className="w-full" /> */}
       </div>
       <div className="hero flex   flex-col md:py-32 md:px-20 px-5 " id="home">
-        <span className="lg:text-5xl text-3xl pt-10 animate__animated animate__backInLeft font-bold md:pl-20 md:px-20">
+        <span className="md:text-5xl text-3xl pt-10 animate__animated animate__backInLeft font-bold md:pl-10 md:px-16">
           Book A Truck For your Waste Collection
         </span>
         <span className="lg:text-3xl text-xl py-2 animate__animated animate__backInLeft font-light text-green-500 md:px-40 md:pl-20 ">
