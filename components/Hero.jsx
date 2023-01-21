@@ -28,11 +28,11 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className=" w-3/5 h-[700px]">
+        <div className="w-full md:w-3/5 h-[700px]">
           <img
             src="/images/temp.png"
             alt="alt"
-            className="w-4/5 h-[600px]  right-20"
+            className="md:w-4/5 w-full h-[600px]  "
           />
         </div>
       </div>
