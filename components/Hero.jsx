@@ -4,18 +4,18 @@ import React from "react";
 const Hero = () => {
   return (
     <div>
-      <div className="absolute -top-[700px] -z-40  -skew-y-[15deg] rotate-180 translate-y-60   bg-[#DEEEEB] w-full h-[900px]">
+      <div className="absolute -top-[700px] -z-40  md:-skew-y-[15deg] rotate-180 translate-y-60   bg-[#DEEEEB] w-full h-[900px]">
         {/* <img src={line} alt="line" className="w-full" /> */}
       </div>
-      <div className="hero flex   flex-col py-32 px-20 " id="home">
-        <span className="text-5xl animate__animated animate__backInLeft font-bold pl-20 px-20">
+      <div className="hero flex   flex-col md:py-32 md:px-20 px-5 " id="home">
+        <span className="lg:text-5xl text-3xl pt-10 animate__animated animate__backInLeft font-bold md:pl-20 md:px-20">
           Book A Truck For your Waste Collection
         </span>
-        <span className="text-3xl animate__animated animate__backInLeft font-light text-green-500 px-40 pl-20 ">
+        <span className="lg:text-3xl text-xl py-2 animate__animated animate__backInLeft font-light text-green-500 md:px-40 md:pl-20 ">
           Book A Truck For your Waste Collection
         </span>
 
-        <div className=" absolute bottom-0 right-20 -z-10 ">
+        <div className=" md:absolute bottom-0 right-20 -z-10 ">
           <img
             src="/images/temp.png"
             alt="alt"
