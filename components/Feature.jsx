@@ -8,7 +8,7 @@ import Fade from "react-reveal/Fade";
 
 const Steps = () => {
   return (
-    <div>
+    <div id="features">
       <div>
         <div className="text-3xl font-bold flex items-center justify-center">
           Features

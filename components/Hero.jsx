@@ -8,7 +8,7 @@ const Hero = () => {
         {/* <img src={line} alt="line" className="w-full" /> */}
       </div>
       <div
-        className="hero flex  md:flex-row justify-center flex-col px-5 "
+        className="hero flex  md:flex-row justify-between  flex-col px-5 "
         id="home"
       >
         <div>
@@ -28,11 +28,11 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-3/5 h-[700px]">
+        <div className="w-full  md:w-2/6 h-[500px] ">
           <img
-            src="/images/temp.png"
+            src="/images/im/hero.png"
             alt="alt"
-            className="md:w-4/5 w-full h-[600px]  "
+            className=" w-4/5 h-[500px]  "
           />
         </div>
       </div>
