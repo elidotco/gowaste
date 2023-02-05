@@ -1,7 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 // import styles from "../styles/Home.module.css";
-import { Feature, Header, Hero, Steps, Testimonails } from "../components";
+import {
+  Contact,
+  Feature,
+  Footer,
+  Header,
+  Hero,
+  Steps,
+  Testimonails,
+} from "../components";
 
 export default function Home() {
   return (
@@ -17,6 +25,8 @@ export default function Home() {
       <Steps />
       <Feature />
       <Testimonails />
+      <Contact />
+      <Footer />
     </div>
   );
 }

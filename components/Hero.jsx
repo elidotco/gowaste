@@ -20,10 +20,14 @@ const Hero = () => {
           </p>
           <div className="mt-5 md:flex hidden  gap-10 ml-20">
             <div>
-              <img src="/images/app-store-badge 1.png" alt=" appstore" />
+              <a href="#">
+                <img src="/images/app-store-badge 1.png" alt=" appstore" />
+              </a>
             </div>
             <div>
-              <img src="/images/google-play-badge 1.png" alt=" appstore" />
+              <a href="#">
+                <img src="/images/google-play-badge 1.png" alt=" appstore" />
+              </a>
             </div>
           </div>
         </div>

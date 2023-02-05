@@ -24,10 +24,10 @@ const Steps = () => {
               <div>
                 <p className="text-xl font-bold">Skilled Drivers</p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  non nemo voluptas ratione tenetur corrupti maiores atque harum
-                  ut. Et nemo, ea eveniet consequuntur non deserunt impedit
-                  consectetur doloremque aliquam?
+                  Our drivers are experienced professionals with a commitment to
+                  customer satisfaction. They possess exceptional driving skills
+                  and are dedicated to providing a stress-free experience for
+                  our clients.
                 </p>
               </div>
             </div>
@@ -40,10 +40,10 @@ const Steps = () => {
               <div>
                 <p className="text-3xl font-bold py-5">Easy Payment</p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  non nemo voluptas ratione tenetur corrupti maiores atque harum
-                  ut. Et nemo, ea eveniet consequuntur non deserunt impedit
-                  consectetur doloremque aliquam?
+                  Our platform supports a variety of payment options, including
+                  cash on pick, mobile Money, and and soon to be debit/credit
+                  cards, allowing you to choose the payment method thats right
+                  for you
                 </p>
               </div>
             </div>
@@ -56,10 +56,10 @@ const Steps = () => {
               <div>
                 <p className="text-xl font-bold">Low Prices</p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  non nemo voluptas ratione tenetur corrupti maiores atque harum
-                  ut. Et nemo, ea eveniet consequuntur non deserunt impedit
-                  consectetur doloremque aliquam?
+                  a feature that offers customers the ability to save money on
+                  their orders. With our commitment to providing affordable
+                  services, you can be sure that you are getting the best value
+                  for your money
                 </p>
               </div>
             </div>

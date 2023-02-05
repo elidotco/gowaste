@@ -29,3 +29,8 @@ a {
     background: black;
   }
 } */
+
+.footer {
+  background: url("../public/footer.jpg") center top no-repeat;
+  background-size: cover;
+}
