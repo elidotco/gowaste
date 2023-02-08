@@ -3,28 +3,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
-import { db } from "../firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import { db, firebaseConfig } from "../firebase";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  onSnapshot,
+  query,
+} from "firebase/firestore";
+import { getApp, getApps, initializeApp } from "firebase/app";
 
-const coll = collection(db, "reviews");
-
-const Testimonails = ({}) => {
-  const [data, setData] = useState([]);
-  const unsub = onSnapshot(coll, (querySnapshot) => {
-    const item = [];
-    querySnapshot.forEach((doc) => {
-      item.push(doc.data());
-
-      setData(item);
-    });
-
-    return () => {
-      unsub();
-    };
-  });
-  useEffect(() => {
-    unsub();
-  });
+const Testimonails = ({ data }) => {
+  console.log(data);
+  // const [data, setData] = useState([]);
 
   return (
     <div>
@@ -83,21 +74,3 @@ const Testimonails = ({}) => {
 };
 
 export default Testimonails;
-
-export async function getStaticProps() {
-  const item = [];
-  const unsub = onSnapshot(coll, (querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      item.push(doc.data());
-    });
-
-    return () => {
-      item;
-      unsub();
-    };
-  });
-  unsub();
-  return {
-    props: { item }, // will be passed to the page component as props
-  };
-}

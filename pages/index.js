@@ -1,4 +1,5 @@
-import { collection, getDocs } from "firebase/firestore";
+import { getApps, initializeApp } from "firebase/app";
+import { collection, getDocs, getFirestore, query } from "firebase/firestore";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -12,9 +13,26 @@ import {
   Steps,
   Testimonails,
 } from "../components";
-import { db } from "../firebase";
+import { db, firebaseConfig } from "../firebase";
+export async function getStaticProps() {
+  const propdb = !getApps().length
+    ? db
+    : getFirestore(initializeApp(firebaseConfig));
 
-export default function Home() {
+  const res = getDocs(query(collection(propdb, "reviews")));
+
+  return {
+    props: {
+      data: (await res).docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      })),
+    },
+  };
+}
+
+export default function Home({ data }) {
+  console.log(data);
   return (
     <div className="">
       <Head>
@@ -27,7 +45,7 @@ export default function Home() {
       <Hero />
       <Steps />
       <Feature />
-      <Testimonails />
+      <Testimonails data={data} />
       <Contact />
       <Footer />
     </div>
