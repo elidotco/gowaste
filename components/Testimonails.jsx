@@ -17,8 +17,8 @@ const Testimonails = () => {
           spaceBetween={50}
           slidesPerView={1}
           autoplay={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <div className="w-full flex flex-col md:flex-row px-10  items-center justify-center">

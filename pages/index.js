@@ -1,5 +1,7 @@
+import { collection, getDocs } from "firebase/firestore";
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect } from "react";
 // import styles from "../styles/Home.module.css";
 import {
   Contact,
@@ -10,6 +12,7 @@ import {
   Steps,
   Testimonails,
 } from "../components";
+import { db } from "../firebase";
 
 export default function Home() {
   return (
@@ -30,3 +33,16 @@ export default function Home() {
     </div>
   );
 }
+
+// export async function getServerSideProps() {
+//   const querySnapshot = await getDocs(collection(db, "cities"));
+
+//   const data = querySnapshot.forEach((doc) => {
+//     // doc.data() is never undefined for query doc snapshots
+//     console.log(doc.id, " => ", doc.data());
+//     return doc.data();
+//   });
+//   return {
+//     props: { data }, // will be passed to the page component as props
+//   };
+// }
