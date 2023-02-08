@@ -29,18 +29,7 @@ const Footer = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
-  const coll = collection(db, "reviews");
-  const unsub = onSnapshot(coll, (querySnapshot) => {
-    const item = [];
-    querySnapshot.forEach((doc) => {
-      item.push(doc.data());
-      console.log(item);
-    });
 
-    return () => {
-      unsub();
-    };
-  });
   const formcheck = (name, email, message) => {
     const test =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -60,9 +49,6 @@ const Footer = () => {
       console.log(doc.id, " => ", doc.data());
     });
   };
-  useEffect(() => {
-    unsub();
-  });
 
   const handlesub = async () => {
     await setDoc(doc(db, "cities", "LA"), {
