@@ -21,7 +21,7 @@ const Contact = () => {
         Contact us
       </div>
       <div>
-        <div className="flex flex-col  items-center justify-center w-full  my-10 px-20 ">
+        <div className="flex flex-col  items-center justify-center w-full  my-10 md:px-20 px-7">
           <div className="border h-12 text-lg rounded-full w-full md:w-3/5">
             <input
               type="text"
