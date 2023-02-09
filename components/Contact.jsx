@@ -16,7 +16,7 @@ const Contact = () => {
     }
   };
   return (
-    <div>
+    <div id="contact">
       <div className="text-3xl font-bold flex items-center justify-center">
         Contact us
       </div>

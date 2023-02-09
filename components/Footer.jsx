@@ -51,11 +51,6 @@ const Footer = () => {
   };
 
   const handlesub = async () => {
-    await setDoc(doc(db, "cities", "LA"), {
-      name: "Los Angeles",
-      state: "CA",
-      country: "USA",
-    });
     if (formcheck(name, email, message)) {
       addDoc(collection(db, "reviews"), {
         name,
@@ -63,6 +58,10 @@ const Footer = () => {
         message,
       });
       console.log(name, email, message);
+      setIsOpen(false);
+      setEmail("");
+      setName("");
+      setMessage("");
     }
   };
   const [isOpen, setIsOpen] = useState(false);
@@ -216,13 +215,22 @@ const Footer = () => {
               for more info
             </div>
             <div className="flex flex-row gap-x-4">
-              <a href="#" className="p-2 rounded-full bg-blue-700">
+              <a
+                href="https://web.facebook.com/gowasteapp"
+                className="p-2 rounded-full bg-blue-700"
+              >
                 <FaFacebookF size={25} color="white" />
               </a>
-              <a href="#" className="p-2 rounded-full bg-white">
+              <a
+                href="https://www.instagram.com/gowaste_app/"
+                className="p-2 rounded-full bg-white"
+              >
                 <FaInstagram size={25} color="pink" />
               </a>
-              <a href="#" className="p-2 rounded-full bg-blue-300">
+              <a
+                href="https://twitter.com/Gowaste_App"
+                className="p-2 rounded-full bg-blue-300"
+              >
                 <FaTwitter size={25} color="light blue" />
               </a>
             </div>
@@ -238,8 +246,20 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <a href="#">Become A Driver</a>
               <a href="#">Become An Agency</a>
-              <a href="#">Terms and Conditions</a>
-              <a href="#">Privacy Policy</a>
+              <a
+                href="https://www.lacgloballimited.com/projects/gowasteterms"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Terms and Conditions
+              </a>
+              <a
+                href="https://www.lacgloballimited.com/projects/wastepolicy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Privacy Policy
+              </a>
             </div>
             <div>
               <p>info@lacgloballimited.com</p>

@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 
 const Steps = () => {
   return (
-    <div>
+    <div id="how-it-works">
       <div>
         <div className="text-4xl pb-10 font-bold flex items-center justify-center">
           How it Works
