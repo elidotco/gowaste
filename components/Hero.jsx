@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ it }) => {
   return (
     <div>
       <div className="absolute -top-[700px] -z-40  md:-skew-y-[15deg] rotate-180 translate-y-60   bg-[#DEEEEB] w-full h-[900px]">
@@ -13,10 +13,12 @@ const Hero = () => {
       >
         <div>
           <p className="md:text-5xl text-3xl pt-20 animate__animated animate__backInLeft font-bold md:pl-20 md:px-20">
-            Book A Truck For your Waste Collection
+            {/* Book A Truck For your Waste Collection */}
+            {it.title}
           </p>
           <p className="lg:text-3xl text-xl py-2 animate__animated animate__backInLeft font-light text-green-500 md:px-40 md:pl-20 ">
-            Book A Truck For your Waste Collection
+            {/* Book A Truck For your Waste Collection */}
+            {it.descriptions}
           </p>
           <div className="mt-5 md:flex hidden  gap-10 ml-20">
             <div>
@@ -33,11 +35,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full  md:w-2/6 h-[500px] ">
-          <img
-            src="/images/im/hero.png"
-            alt="alt"
-            className=" w-4/5 h-[500px]  "
-          />
+          <img src={it.image.url} alt="alt" className=" w-4/5 h-[500px]  " />
         </div>
       </div>
       {/* <div className=" -rotate-1 ml-20 mb-20">

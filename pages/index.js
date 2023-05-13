@@ -4,6 +4,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 // import styles from "../styles/Home.module.css";
+
+import {
+  getrecentPosts,
+  getScreenshot,
+  getComments,
+  getLinks,
+  getHero,
+} from "../servicees";
 import {
   Contact,
   Feature,
@@ -14,25 +22,27 @@ import {
   Testimonails,
 } from "../components";
 import { db, firebaseConfig } from "../firebase";
-export async function getStaticProps() {
-  const propdb = !getApps().length
-    ? db
-    : getFirestore(initializeApp(firebaseConfig));
+// export async function getStaticProps() {
+//   const propdb = !getApps().length
+//     ? db
+//     : getFirestore(initializeApp(firebaseConfig));
 
-  const res = getDocs(query(collection(propdb, "reviews")));
+//   const res = getDocs(query(collection(propdb, "reviews")));
 
-  return {
-    props: {
-      data: (await res).docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      })),
-    },
-  };
-}
+//   return {
+//     props: {
+//       data: (await res).docs.map((doc) => ({
+//         ...doc.data(),
+//         id: doc.id,
+//       })),
+//     },
+//   };
+// }
 
-export default function Home({ data }) {
-  console.log(data);
+export default function Home({ hero, screens, gallery }) {
+  console.log(hero);
+  console.log(gallery);
+  console.log(screens);
   return (
     <div className="">
       <Head>
@@ -45,10 +55,10 @@ export default function Home({ data }) {
       </Head>
       <Header />
 
-      <Hero />
-      <Steps />
-      <Feature />
-      <Testimonails data={data} />
+      <Hero it={hero[0]} />
+      <Steps steps={screens} />
+      <Feature sets={gallery} />
+      {/* <Testimonails data={data} /> */}
       <Contact />
       <Footer />
     </div>
@@ -67,3 +77,16 @@ export default function Home({ data }) {
 //     props: { data }, // will be passed to the page component as props
 //   };
 // }
+
+export async function getStaticProps() {
+  // const posts = (await getPosts()) || [];
+  const gallery = (await getrecentPosts()) || [];
+  const links = (await getLinks()) || [];
+  const screens = (await getScreenshot()) || [];
+  // const comment = (await getComments()) || [];
+  const hero = (await getHero()) || [];
+
+  return {
+    props: { hero, screens, gallery },
+  };
+}

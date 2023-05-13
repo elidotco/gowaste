@@ -6,7 +6,7 @@ import { MdOutlinePayments } from "react-icons/md";
 import "animate.css";
 import Fade from "react-reveal/Fade";
 
-const Steps = () => {
+const Steps = ({ sets }) => {
   return (
     <div id="features">
       <div>
@@ -22,12 +22,14 @@ const Steps = () => {
                 <AiOutlineCar />
               </div>
               <div>
-                <p className="text-xl font-bold">Skilled Drivers</p>
+                <p className="text-xl font-bold">{sets[0].title}</p>
                 <p>
-                  Our drivers are experienced professionals with a commitment to
+                  {/* Our drivers are experienced professionals with a commitment to
                   customer satisfaction. They possess exceptional driving skills
                   and are dedicated to providing a stress-free experience for
-                  our clients.
+                  our clients. */}
+
+                  {sets[0].des}
                 </p>
               </div>
             </div>
@@ -38,12 +40,14 @@ const Steps = () => {
                 <MdOutlinePayments />
               </div>
               <div>
-                <p className="text-3xl font-bold py-5">Easy Payment</p>
+                <p className="text-3xl font-bold py-5">{sets[1].title}</p>
                 <p>
-                  Our platform supports a variety of payment options, including
+                  {/* Our platform supports a variety of payment options, including
                   cash on pick, mobile Money, and and soon to be debit/credit
                   cards, allowing you to choose the payment method thats right
-                  for you
+                  for you */}
+
+                  {sets[1].des}
                 </p>
               </div>
             </div>
@@ -54,12 +58,14 @@ const Steps = () => {
                 <MdPriceCheck />
               </div>
               <div>
-                <p className="text-xl font-bold">Low Prices</p>
+                <p className="text-xl font-bold">{sets[2].title}</p>
                 <p>
-                  a feature that offers customers the ability to save money on
+                  {/* a feature that offers customers the ability to save money on
                   their orders. With our commitment to providing affordable
                   services, you can be sure that you are getting the best value
-                  for your money
+                  for your money */}
+
+                  {sets[2].des}
                 </p>
               </div>
             </div>
