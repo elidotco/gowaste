@@ -262,7 +262,7 @@ const Footer = () => {
               </a>
               
             </div>
-            <div>
+            <div className="flex flex-col gap-2">
               <a href='mailto:gowaste@lacgloballimited.com'>gowaste@lacgloballimited.com</a>
               <p>number</p>
               <span className="cursor-pointer" onClick={openModal}>
