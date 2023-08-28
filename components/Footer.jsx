@@ -260,7 +260,6 @@ const Footer = () => {
               >
                 Privacy Policy
               </a>
-              <a href="https://gofood.lacgloballimited.com/impressum">Impressum</a>
               
             </div>
             <div>
@@ -269,6 +268,8 @@ const Footer = () => {
               <span className="cursor-pointer" onClick={openModal}>
                 Write a review
               </span>
+              <a href="https://gofood.lacgloballimited.com/impressum">Impressum</a>
+              
             </div>
           </div>
         </div>
