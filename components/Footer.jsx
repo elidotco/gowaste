@@ -267,7 +267,7 @@ const Footer = () => {
               <span className="cursor-pointer" onClick={openModal}>
                 Write a review
               </span>
-              <a href="https://lacgloballimited.com">Impressum</a>
+              <a href="https://gofood.lacgloballimited.com/impressum">Impressum</a>
             </div>
           </div>
         </div>
